@@ -80,6 +80,19 @@ int sum_of_matrix(int** matrix, int row, int col)
     return sum;
 }
 
+int sum_of_stationary_matrix(int matrix[3][3])
+{
+    int sum = 0;
+    for(int i = 0;i < 3; i++)
+    {
+        for(int j = 0; j < 3; j++)
+        {
+            
+        }
+    }
+    return sum;
+}
+
 void thuHoi(int**& matrix, int row, int col)
 {
     
@@ -126,11 +139,11 @@ int main()
     std::cout << "Nhap hang va cot: ";
     std::cin >> row >> col;
     int **matrix = 0;
+    int stationary_matrix[3][3] = {{1 ,2 ,3}, {4, 5, 6}, {7, 8, 9}};
+    // capPhat(matrix, row, col);
+    // nhapMang(matrix, row, col); // Nhap theo hang 
+    // inMang(matrix, row, col);
 
-    capPhat(matrix, row, col);
-    nhapMang(matrix, row, col); // Nhap theo hang 
-    inMang(matrix, row, col);
-
-    std::cout << "\n" << sum_of_matrix(matrix, row, col);
-
+    // std::cout << "\n" << sum_of_matrix(matrix, row, col);
+    std::cout << sum_of_stationary_matrix(stationary_matrix);
 }
