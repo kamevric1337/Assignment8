@@ -22,13 +22,15 @@ void nhapMang(int** matrix, int row, int col)
 
 void inMang(int** matrix, int row, int col)
 {
-    std::cout << "\nIn ra ma tran" ;
+    std::cout << "\nIn ra ma tran: \n" ;
     for(int i = 0;i < row; i++)
     {
+        std::cout << "[  ";
         for(int j = 0; j < col; j++)
         {
             std::cout <<  matrix[i][j] << "  ";
         }
+        std::cout << "] ";
         std::cout << std::endl;
     }
 }
@@ -88,21 +90,33 @@ void thuHoi(int**& matrix, int row, int col)
     delete[] matrix;
 }
 
-int sum_of_row(int** matrix, int row, int col)
+int sum_of_row(int** matrix, int target_row, int col)
 {
     int sum = 0;
     for(int i = 0; i < col; i++)
     {
-        sum += matrix[row][i];
+        sum += matrix[target_row][i];
     }
 }
 
-int sum_of_col(int** matrix, int row, int col)
+int sum_of_col(int** matrix, int row, int target_col)
 {
     int sum = 0;
     for(int i = 0; i < row; i++)
     {
-        sum += matrix[i][col];
+        sum += matrix[i][target_col];
+    }
+}
+
+int max_on_col(int** matrix, int row, int target_col)
+{
+    int max = matrix[0][target_col];
+    for(int i = 0; i < row; i++)
+    {
+        if(matrix[i][target_col] > max)
+        {
+            max = matrix[i][target_col];
+        }
     }
 }
 
