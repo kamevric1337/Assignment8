@@ -87,7 +87,7 @@ int sum_of_stationary_matrix(int matrix[3][3])
     {
         for(int j = 0; j < 3; j++)
         {
-            
+            sum += matrix[i][j];
         }
     }
     return sum;
