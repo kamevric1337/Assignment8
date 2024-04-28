@@ -27,7 +27,7 @@ float division_of_2array(float a, float b)
 {
     if(b == 0.0)
     {
-        printf("\nERROR\n");
+        printf("\nERROR: Denominator equals 0.0\n");
         return 0.0;
     }
     return a / b;
@@ -46,7 +46,7 @@ int main()
 {
     const int n = 10;
     float array1[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    float array2[10] = {1, 4, 8, 6, 2, 4, 7, 1, 8, 20};
+    float array2[10] = {1, 4, 8, 6, 2, 4, 7, 1, 0, 20};
     float array_sum[10] = {0};
     float array_subtraction[10] = {0};
     float array_product[10] = {0};
